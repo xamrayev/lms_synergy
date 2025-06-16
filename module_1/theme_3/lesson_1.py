@@ -1,4 +1,4 @@
-def practise_1():
+def practice_1():
     # Ввод количества чисел
     N = int(input("Введите количество чисел: "))
 
@@ -14,7 +14,7 @@ def practise_1():
     print("Количество нулей:", count_zero)
 
 
-def practise_2():
+def practice_2():
     import math
 
     # Ввод числа
@@ -32,7 +32,7 @@ def practise_2():
 
     print("Количество натуральных делителей:", count)
 
-def practise_3():
+def practice_3():
     # Вводим A и B
     A = int(input("Введите A (начало диапазона): "))
     B = int(input("Введите B (конец диапазона, A ≤ B): "))

@@ -1,9 +1,9 @@
-from module_1.theme_3 import lesson_1
+from module_1.theme_3 import lesson_2
 
 def main():
-    lesson_1.practise_1()
-    lesson_1.practise_2()
-    lesson_1.practise_3()
+    lesson_2.practice_1()
+    lesson_2.practice_2()
+    lesson_2.practice_3()
     
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-def practise_1():
+def practice_1():
     # Ввод числа
     num = int(input("Введите целое число: "))
 
@@ -14,7 +14,7 @@ def practise_1():
             print("отрицательное четное число")
 
 
-def practise_2():
+def practice_2():
     # Ввод слова
     word = input("Введите слово из маленьких латинских букв: ")
 
@@ -41,7 +41,7 @@ def practise_2():
         print(False)
 
 
-def practise_3():
+def practice_3():
     # Ввод данных
     X = int(input("Минимальная сумма инвестиций X: "))
     A = int(input("У Майкла есть A долларов: "))
