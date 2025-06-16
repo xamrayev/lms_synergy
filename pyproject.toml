@@ -1,0 +1,7 @@
+[project]
+name = "lms-synergy"
+version = "0.1.0"
+description = "Synergy LMS homeworks"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
