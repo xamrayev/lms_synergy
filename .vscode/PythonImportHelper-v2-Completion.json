@@ -53,6 +53,15 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "lesson_4",
         "importPath": "module_1.theme_3",
         "description": "module_1.theme_3",
@@ -418,6 +427,60 @@
         "description": "module_1.theme_3.lesson_6",
         "peekOfCode": "pets = {\n    1: {\n        \"Мухтар\": {\n            \"Вид питомца\": \"Собака\",\n            \"Возраст питомца\": 9,\n            \"Имя владельца\": \"Павел\"\n        }\n    },\n    2: {\n        \"Каа\": {",
         "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "add_matrices",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "def add_matrices(m1, m2):\n    rows = len(m1)\n    cols = len(m1[0])\n    result = []\n    for i in range(rows):\n        row = []\n        for j in range(cols):\n            row.append(m1[i][j] + m2[i][j])\n        result.append(row)\n    return result",
+        "detail": "module_1.theme_4.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "generate_matrix",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "def generate_matrix(rows, cols, min_val=-150, max_val=150):\n    return [[random.randint(min_val, max_val) for _ in range(cols)] for _ in range(rows)]\ndef practice_1():\n    matrix_3 = add_matrices(matrix_1, matrix_2)\n    print(\"Результат сложения matrix_1 и matrix_2:\")\n    for row in matrix_3:\n        print(row)\ndef practice_2():\n    # Генерируем случайные матрицы\n    rows, cols = 10, 10",
+        "detail": "module_1.theme_4.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "def practice_1():\n    matrix_3 = add_matrices(matrix_1, matrix_2)\n    print(\"Результат сложения matrix_1 и matrix_2:\")\n    for row in matrix_3:\n        print(row)\ndef practice_2():\n    # Генерируем случайные матрицы\n    rows, cols = 10, 10\n    m1 = generate_matrix(rows, cols)\n    m2 = generate_matrix(rows, cols)",
+        "detail": "module_1.theme_4.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "def practice_2():\n    # Генерируем случайные матрицы\n    rows, cols = 10, 10\n    m1 = generate_matrix(rows, cols)\n    m2 = generate_matrix(rows, cols)\n    # Складываем их\n    m3 = add_matrices(m1, m2)\n    print(\"\\nМатрица 1:\")\n    for row in m1:\n        print(row)",
+        "detail": "module_1.theme_4.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "matrix_1",
+        "kind": 5,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "matrix_1 = [\n    [0, -2, -1, -6, -6, 0, -9, -8, -30, -9],\n    [5, 12, 4, -16, -4, -9, -16, -15, 1, -26],\n    [13, 39, 14, 23, -4, 40, 32, 6, -8, 23],\n    [13, -8, 34, 49, 30, 18, 47, 11, -24, 11],\n    [21, 73, 71, 61, -1, 79, -34, 22, 69, 67],\n    [75, 25, 25, 39, 100, -12, -21, 81, -10, 87],\n    [81, 63, 102, 104, 53, -44, 71, -36, -36, -9],\n    [7, 98, 26, -3, 128, 94, 18, -26, 14, 21],\n    [65, 128, 80, 124, 27, -32, 73, 59, 19, 34],",
+        "detail": "module_1.theme_4.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "matrix_2",
+        "kind": 5,
+        "importPath": "module_1.theme_4.lesson_2",
+        "description": "module_1.theme_4.lesson_2",
+        "peekOfCode": "matrix_2 = [\n    [0, 4, 6, 11, 15, 6, 9, 26, 15, 21],\n    [-5, 4, -15, -9, -4, 2, -8, 19, -4, -1],\n    [-2, -39, -19, 14, 22, 5, -34, 15, 16, -9],\n    [-22, -52, 11, -11, -3, 16, -11, -6, -32, -2],\n    [-61, -47, -5, -58, 16, -13, 28, -36, -64, 2],\n    [-29, 23, 19, 2, -14, -87, 7, -88, 39, 7],\n    [-6, 18, -97, 26, -64, 0, -72, -34, -68, -92],\n    [-120, -117, -72, -129, -139, 16, -61, 36, -137, -29],\n    [-112, -83, 7, -119, -132, -129, -143, -154, -23, -34],",
+        "detail": "module_1.theme_4.lesson_2",
         "documentation": {}
     },
     {
