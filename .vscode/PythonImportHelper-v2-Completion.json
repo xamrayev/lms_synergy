@@ -1,0 +1,324 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "lesson_4",
+        "importPath": "module_1.theme_3",
+        "description": "module_1.theme_3",
+        "isExtraImport": true,
+        "detail": "module_1.theme_3",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"lms-synergy\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"lms-synergy\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"lms-synergy\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"lms-synergy\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"lms-synergy\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.13/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_1",
+        "description": "module_1.theme_2.lesson_1",
+        "peekOfCode": "def practice_1():\n    # Запрос информации о питомце\n    vid = input(\"Введите вид питомца: \")\n    vozrast = input(\"Введите возраст питомца: \")\n    klichka = input(\"Введите кличку питомца: \")\n    # Вывод результата\n    print(f\"Это {vid} по кличке \\\"{klichka}\\\". Возраст: {vozrast} лет.\")\ndef practice_2():\n    # Запрашиваем этапы развития человека\n    stage1 = input(\"Введите первую стадию развития человека: \")",
+        "detail": "module_1.theme_2.lesson_1",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_1",
+        "description": "module_1.theme_2.lesson_1",
+        "peekOfCode": "def practice_2():\n    # Запрашиваем этапы развития человека\n    stage1 = input(\"Введите первую стадию развития человека: \")\n    stage2 = input(\"Введите вторую стадию: \")\n    stage3 = input(\"Введите третью стадию: \")\n    stage4 = input(\"Введите четвёртую стадию: \")\n    stage5 = input(\"Введите пятую стадию: \")\n    stage6 = input(\"Введите шестую стадию (например, Homo sapiens sapiens): \")\n    # Выводим результат с разделителем =>\n    print(stage1, stage2, stage3, stage4, stage5, stage6, sep=\" => \")",
+        "detail": "module_1.theme_2.lesson_1",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_2",
+        "description": "module_1.theme_2.lesson_2",
+        "peekOfCode": "def practice_1():\n    # Ввод сторон прямоугольника (возможно, вещественных)\n    a = float(input(\"Введите длину первой стороны прямоугольника: \"))\n    b = float(input(\"Введите длину второй стороны прямоугольника: \"))\n    # Вычисление площади и периметра\n    area = a * b\n    perimeter = 2 * (a + b)\n    # Вывод результатов\n    print(\"Площадь прямоугольника:\", area)\n    print(\"Периметр прямоугольника:\", perimeter)",
+        "detail": "module_1.theme_2.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_2",
+        "description": "module_1.theme_2.lesson_2",
+        "peekOfCode": "def practice_2():\n    # Ввод пятизначного числа\n    number = input(\"Введите пятизначное число: \")\n    # Проверка длины\n    if len(number) != 5 or not number.isdigit():\n        print(\"Ошибка: введите строго пятизначное положительное целое число.\")\n    else:\n        # Преобразуем символы в отдельные цифры\n        d10k = int(number[0])   # десятки тысяч\n        d1k = int(number[1])    # тысячи",
+        "detail": "module_1.theme_2.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_3",
+        "description": "module_1.theme_2.lesson_3",
+        "peekOfCode": "def practice_1():\n    # Ввод числа\n    num = int(input(\"Введите целое число: \"))\n    # Проверка и описание числа\n    if num == 0:\n        print(\"нулевое число\")\n    elif num % 2 != 0:\n        print(\"число не является четным\")\n    else:\n        if num > 0:",
+        "detail": "module_1.theme_2.lesson_3",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_3",
+        "description": "module_1.theme_2.lesson_3",
+        "peekOfCode": "def practice_2():\n    # Ввод слова\n    word = input(\"Введите слово из маленьких латинских букв: \")\n    # Определяем гласные\n    vowels = 'aeiou'\n    vowel_count = 0\n    consonant_count = 0\n    vowel_counts = {v: 0 for v in vowels}\n    # Подсчет\n    for char in word:",
+        "detail": "module_1.theme_2.lesson_3",
+        "documentation": {}
+    },
+    {
+        "label": "practice_3",
+        "kind": 2,
+        "importPath": "module_1.theme_2.lesson_3",
+        "description": "module_1.theme_2.lesson_3",
+        "peekOfCode": "def practice_3():\n    # Ввод данных\n    X = int(input(\"Минимальная сумма инвестиций X: \"))\n    A = int(input(\"У Майкла есть A долларов: \"))\n    B = int(input(\"У Ивана есть B долларов: \"))\n    # Проверка условий\n    if A >= X and B >= X:\n        print(2)\n    elif A >= X:\n        print(\"Mike\")",
+        "detail": "module_1.theme_2.lesson_3",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_1",
+        "description": "module_1.theme_3.lesson_1",
+        "peekOfCode": "def practice_1():\n    # Ввод количества чисел\n    N = int(input(\"Введите количество чисел: \"))\n    count_zero = 0\n    print(f\"Введите {N} целых чисел:\")\n    # Вводим N чисел и считаем нули\n    for _ in range(N):\n        num = int(input())\n        if num == 0:\n            count_zero += 1",
+        "detail": "module_1.theme_3.lesson_1",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_1",
+        "description": "module_1.theme_3.lesson_1",
+        "peekOfCode": "def practice_2():\n    import math\n    # Ввод числа\n    X = int(input(\"Введите натуральное число X (≤ 2*10^9): \"))\n    count = 0\n    limit = int(math.isqrt(X)) + 1\n    # Перебираем делители от 1 до √X\n    for i in range(1, limit):\n        if X % i == 0:\n            count += 1  # i — делитель",
+        "detail": "module_1.theme_3.lesson_1",
+        "documentation": {}
+    },
+    {
+        "label": "practice_3",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_1",
+        "description": "module_1.theme_3.lesson_1",
+        "peekOfCode": "def practice_3():\n    # Вводим A и B\n    A = int(input(\"Введите A (начало диапазона): \"))\n    B = int(input(\"Введите B (конец диапазона, A ≤ B): \"))\n    # Список чётных чисел\n    even_numbers = [str(i) for i in range(A, B + 1) if i % 2 == 0]\n    # Вывод через пробел\n    print(\"Четные числа на отрезке:\")\n    print(' '.join(even_numbers))",
+        "detail": "module_1.theme_3.lesson_1",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_2",
+        "description": "module_1.theme_3.lesson_2",
+        "peekOfCode": "def practice_1():\n    # Ввод количества чисел\n    N = int(input(\"Введите количество чисел: \"))\n    # Ввод N чисел в отдельной строке каждое\n    numbers = [int(input()) for _ in range(N)]\n    # Переворот массива\n    reversed_numbers = numbers[::-1]\n    # Вывод в одну строку\n    print(\"Перевернутый массив:\")\n    print(*reversed_numbers)",
+        "detail": "module_1.theme_3.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_2",
+        "description": "module_1.theme_3.lesson_2",
+        "peekOfCode": "def practice_2():\n    # Ввод N и чисел\n    N = int(input(\"Введите количество элементов: \"))\n    arr = list(map(int, input(\"Введите числа через пробел: \").split()))\n    # Проверка на соответствие длины\n    if len(arr) != N:\n        print(\"Ошибка: введено неверное количество чисел.\")\n    else:\n        # Перестановка по условию\n        modified = []",
+        "detail": "module_1.theme_3.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_3",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_2",
+        "description": "module_1.theme_3.lesson_2",
+        "peekOfCode": "def practice_3():\n    # Вводим максимальную массу лодки\n    m = int(input(\"Введите максимальную массу лодки: \"))\n    # Вводим количество рыбаков\n    n = int(input(\"Введите количество рыбаков: \"))\n    # Вводим веса рыбаков\n    weights = [int(input()) for _ in range(n)]\n    # Сортировка по весу\n    weights.sort()\n    # Два указателя: лёгкий и тяжёлый",
+        "detail": "module_1.theme_3.lesson_2",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_3",
+        "description": "module_1.theme_3.lesson_3",
+        "peekOfCode": "def practice_1():\n    # Ввод строки без пробелов\n    s = input(\"Введите строку без пробелов: \")\n    # Сравниваем строку с её обратной версией\n    if s == s[::-1]:\n        print(\"yes\")\n    else:\n        print(\"no\")\ndef practice_2():\n    # Ввод строки (с пробелами)",
+        "detail": "module_1.theme_3.lesson_3",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_3",
+        "description": "module_1.theme_3.lesson_3",
+        "peekOfCode": "def practice_2():\n    # Ввод строки (с пробелами)\n    text = input(\"Введите строку: \")\n    # Разделить по пробелам и соединить одним пробелом\n    cleaned = ' '.join(text.split())\n    # Вывод результата\n    print(\"Изменённая строка:\")\n    print(cleaned)",
+        "detail": "module_1.theme_3.lesson_3",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_4",
+        "description": "module_1.theme_3.lesson_4",
+        "peekOfCode": "def practice_1():\n    # Ввод количества чисел\n    n = int(input(\"Введите количество чисел: \"))\n    # Ввод самих чисел\n    numbers = list(map(int, input(\"Введите числа через пробел: \").split()))\n    # Используем множество для хранения уникальных значений\n    unique_numbers = set(numbers)\n    # Вывод количества уникальных чисел\n    print(len(unique_numbers))\ndef practice_2():",
+        "detail": "module_1.theme_3.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_4",
+        "description": "module_1.theme_3.lesson_4",
+        "peekOfCode": "def practice_2():\n    # Ввод первого списка\n    list1 = list(map(int, input(\"Введите числа первого списка: \").split()))\n    # Ввод второго списка\n    list2 = list(map(int, input(\"Введите числа второго списка: \").split()))\n    # Переводим оба списка в множества\n    set1 = set(list1)\n    set2 = set(list2)\n    # Находим пересечение и выводим его длину\n    common = set1 & set2",
+        "detail": "module_1.theme_3.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "practice_3",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_4",
+        "description": "module_1.theme_3.lesson_4",
+        "peekOfCode": "def practice_3():\n    # Ввод последовательности чисел\n    numbers = list(map(int, input(\"Введите числа через пробел: \").split()))\n    seen = set()\n    for num in numbers:\n        if num in seen:\n            print(\"YES\")\n        else:\n            print(\"NO\")\n            seen.add(num)",
+        "detail": "module_1.theme_3.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_5",
+        "description": "module_1.theme_3.lesson_5",
+        "peekOfCode": "def practice_1():\n    pets = {}\n    # Запрашиваем количество питомцев\n    n = int(input(\"Сколько питомцев вы хотите добавить? \"))\n    for i in range(n):\n        print(f\"\\nПитомец №{i+1}\")\n        name = input(\"Введите имя питомца: \")\n        species = input(\"Введите вид питомца: \")\n        age = int(input(\"Введите возраст питомца: \"))\n        owner = input(\"Введите имя владельца: \")",
+        "detail": "module_1.theme_3.lesson_5",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_5",
+        "description": "module_1.theme_3.lesson_5",
+        "peekOfCode": "def practice_2():\n    my_dict = {}\n    for i in range(10, -6, -1):  # от 10 до -5 включительно\n        try:\n            my_dict[i] = i ** i\n        except:\n            my_dict[i] = \"Ошибка (нельзя возвести отрицательное в отрицательную степень)\"\n    print(\"\\nСловарь степеней:\")\n    for k, v in my_dict.items():\n        print(f\"{k}: {v}\")",
+        "detail": "module_1.theme_3.lesson_5",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    lesson_4.practice_1()\n    lesson_4.practice_2()\n    lesson_4.practice_3()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    }
+]
