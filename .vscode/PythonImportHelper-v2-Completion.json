@@ -44,6 +44,15 @@
         "documentation": {}
     },
     {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "lesson_4",
         "importPath": "module_1.theme_3",
         "description": "module_1.theme_3",
@@ -310,6 +319,105 @@
         "description": "module_1.theme_3.lesson_5",
         "peekOfCode": "def practice_2():\n    my_dict = {}\n    for i in range(10, -6, -1):  # от 10 до -5 включительно\n        try:\n            my_dict[i] = i ** i\n        except:\n            my_dict[i] = \"Ошибка (нельзя возвести отрицательное в отрицательную степень)\"\n    print(\"\\nСловарь степеней:\")\n    for k, v in my_dict.items():\n        print(f\"{k}: {v}\")",
         "detail": "module_1.theme_3.lesson_5",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def factorial(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\npets = {\n    1: {\n        \"Мухтар\": {\n            \"Вид питомца\": \"Собака\",\n            \"Возраст питомца\": 9,",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "get_suffix",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def get_suffix(age):\n    if age % 10 == 1 and age % 100 != 11:\n        return \"год\"\n    elif 2 <= age % 10 <= 4 and not 12 <= age % 100 <= 14:\n        return \"года\"\n    else:\n        return \"лет\"\ndef get_pet(ID):\n    return pets[ID] if ID in pets else False\ndef pets_list():",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "get_pet",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def get_pet(ID):\n    return pets[ID] if ID in pets else False\ndef pets_list():\n    for ID in pets:\n        pet_dict = pets[ID]\n        for name, info in pet_dict.items():\n            suffix = get_suffix(info[\"Возраст питомца\"])\n            print(f'{ID}. Это {info[\"Вид питомца\"]} по кличке \"{name}\". Возраст: {info[\"Возраст питомца\"]} {suffix}. Владелец: {info[\"Имя владельца\"]}')\ndef create():\n    if pets:",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "pets_list",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def pets_list():\n    for ID in pets:\n        pet_dict = pets[ID]\n        for name, info in pet_dict.items():\n            suffix = get_suffix(info[\"Возраст питомца\"])\n            print(f'{ID}. Это {info[\"Вид питомца\"]} по кличке \"{name}\". Возраст: {info[\"Возраст питомца\"]} {suffix}. Владелец: {info[\"Имя владельца\"]}')\ndef create():\n    if pets:\n        last = collections.deque(pets, maxlen=1)[0]\n        new_id = last + 1",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "create",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def create():\n    if pets:\n        last = collections.deque(pets, maxlen=1)[0]\n        new_id = last + 1\n    else:\n        new_id = 1\n    name = input(\"Имя питомца: \")\n    species = input(\"Вид питомца: \")\n    age = int(input(\"Возраст питомца: \"))\n    owner = input(\"Имя владельца: \")",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "read",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def read():\n    ID = int(input(\"Введите ID питомца для отображения: \"))\n    pet_dict = get_pet(ID)\n    if not pet_dict:\n        print(\"Питомец с таким ID не найден.\")\n        return\n    for name, info in pet_dict.items():\n        suffix = get_suffix(info[\"Возраст питомца\"])\n        print(f'Это {info[\"Вид питомца\"]} по кличке \"{name}\". Возраст: {info[\"Возраст питомца\"]} {suffix}. Владелец: {info[\"Имя владельца\"]}')\ndef update():",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def update():\n    ID = int(input(\"Введите ID питомца для обновления: \"))\n    pet_dict = get_pet(ID)\n    if not pet_dict:\n        print(\"Питомец с таким ID не найден.\")\n        return\n    for name in pet_dict:\n        print(f\"Обновляем данные для '{name}'\")\n        new_species = input(\"Новый вид питомца: \")\n        new_age = int(input(\"Новый возраст: \"))",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def delete():\n    ID = int(input(\"Введите ID питомца для удаления: \"))\n    if ID in pets:\n        del pets[ID]\n        print(\"Питомец удалён.\")\n    else:\n        print(\"Нет питомца с таким ID.\")\ndef practice_1():\n    # Ввод пользователя\n    n = int(input(\"Введите натуральное число: \"))",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def practice_1():\n    # Ввод пользователя\n    n = int(input(\"Введите натуральное число: \"))\n    # Вычисляем факториалы от n до 1\n    factorial_list = [factorial(i) for i in range(n, 0, -1)]\n    print(\"Список факториалов от\", n, \"до 1:\", factorial_list)\ndef practice_2():\n    while True:\n        command = input(\"\\nВведите команду (create/read/update/delete/list/stop): \").lower()\n        if command == \"stop\":",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "def practice_2():\n    while True:\n        command = input(\"\\nВведите команду (create/read/update/delete/list/stop): \").lower()\n        if command == \"stop\":\n            break\n        elif command == \"create\":\n            create()\n        elif command == \"read\":\n            read()\n        elif command == \"update\":",
+        "detail": "module_1.theme_3.lesson_6",
+        "documentation": {}
+    },
+    {
+        "label": "pets",
+        "kind": 5,
+        "importPath": "module_1.theme_3.lesson_6",
+        "description": "module_1.theme_3.lesson_6",
+        "peekOfCode": "pets = {\n    1: {\n        \"Мухтар\": {\n            \"Вид питомца\": \"Собака\",\n            \"Возраст питомца\": 9,\n            \"Имя владельца\": \"Павел\"\n        }\n    },\n    2: {\n        \"Каа\": {",
+        "detail": "module_1.theme_3.lesson_6",
         "documentation": {}
     },
     {
