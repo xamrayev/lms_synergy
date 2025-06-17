@@ -502,6 +502,60 @@
         "documentation": {}
     },
     {
+        "label": "Transport",
+        "kind": 6,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "class Transport:\n    def __init__(self, name, max_speed, mileage):\n        self.name = name\n        self.max_speed = max_speed\n        self.mileage = mileage\n# Класс-наследник\nclass Autobus(Transport):\n    pass\ndef practice_1():\n    # Создание объекта",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "Autobus",
+        "kind": 6,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "class Autobus(Transport):\n    pass\ndef practice_1():\n    # Создание объекта\n    bus = Autobus(\"Renault Logan\", 180, 12)\n    # Вывод\n    print(f\"Название автомобиля: {bus.name}\")\n    print(f\"Скорость: {bus.max_speed}\")\n    print(f\"Пробег: {bus.mileage}\")\n# Родительский класс",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "Transport",
+        "kind": 6,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "class Transport:\n    def __init__(self, name, max_speed, mileage):\n        self.name = name\n        self.max_speed = max_speed\n        self.mileage = mileage\n    def seating_capacity(self, capacity):\n        return f\"Вместимость одного автобуса {self.name}: {capacity} пассажиров\"\n# Наследуемый класс с переопределением метода\nclass Autobus(Transport):\n    def seating_capacity(self, capacity=50):",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "Autobus",
+        "kind": 6,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "class Autobus(Transport):\n    def seating_capacity(self, capacity=50):\n        return super().seating_capacity(capacity)\ndef practice_2():\n    # Создание автобуса\n    bus = Autobus(\"Renault Logan\", 180, 12)\n    # Вывод вместимости\n    print(bus.seating_capacity())\nif __name__ == \"__main__\":\n    practice_1()",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "practice_1",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "def practice_1():\n    # Создание объекта\n    bus = Autobus(\"Renault Logan\", 180, 12)\n    # Вывод\n    print(f\"Название автомобиля: {bus.name}\")\n    print(f\"Скорость: {bus.max_speed}\")\n    print(f\"Пробег: {bus.mileage}\")\n# Родительский класс\nclass Transport:\n    def __init__(self, name, max_speed, mileage):",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
+        "label": "practice_2",
+        "kind": 2,
+        "importPath": "module_1.theme_4.lesson_4",
+        "description": "module_1.theme_4.lesson_4",
+        "peekOfCode": "def practice_2():\n    # Создание автобуса\n    bus = Autobus(\"Renault Logan\", 180, 12)\n    # Вывод вместимости\n    print(bus.seating_capacity())\nif __name__ == \"__main__\":\n    practice_1()\n    practice_2()",
+        "detail": "module_1.theme_4.lesson_4",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "main",
