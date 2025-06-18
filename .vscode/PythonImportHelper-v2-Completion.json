@@ -44,15 +44,6 @@
         "documentation": {}
     },
     {
-        "label": "collections",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "collections",
-        "description": "collections",
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -62,11 +53,38 @@
         "documentation": {}
     },
     {
-        "label": "lesson_4",
-        "importPath": "module_1.theme_3",
-        "description": "module_1.theme_3",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "module_1.theme_3",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "game",
+        "importPath": "module_1.project.game",
+        "description": "module_1.project.game",
+        "isExtraImport": true,
+        "detail": "module_1.project.game",
         "documentation": {}
     },
     {
@@ -148,6 +166,24 @@
         "description": ".venv.bin.activate_this",
         "peekOfCode": "sys.prefix = base",
         "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Game",
+        "kind": 6,
+        "importPath": "module_1.project.game",
+        "description": "module_1.project.game",
+        "peekOfCode": "class Game:\n    def __init__(self, width=20, height=15):\n        self.width = width\n        self.height = height\n        self.field = [[' ' for _ in range(width)] for _ in range(height)]\n        self.helicopter_x = width // 2\n        self.helicopter_y = height // 2\n        self.helicopter_water = 0\n        self.helicopter_max_water = 3\n        self.helicopter_lives = 3",
+        "detail": "module_1.project.game",
+        "documentation": {}
+    },
+    {
+        "label": "game",
+        "kind": 2,
+        "importPath": "module_1.project.game",
+        "description": "module_1.project.game",
+        "peekOfCode": "def game():\n    \"\"\"Главная функция\"\"\"\n    print(\"Игра 'Вертолет-пожарный'\")\n    # Выбор размера поля\n    try:\n        width = int(input(\"Введите ширину поля (по умолчанию 20): \") or 20)\n        height = int(input(\"Введите высоту поля (по умолчанию 15): \") or 15)\n    except ValueError:\n        width, height = 20, 15\n    game = Game(width, height)",
+        "detail": "module_1.project.game",
         "documentation": {}
     },
     {
@@ -589,15 +625,6 @@
         "description": "module_1.theme_5.lesson_1",
         "peekOfCode": "def practice_2():\n    t = Turtle(0, 0, 2)\n    t.go_up()\n    t.go_right()\n    print(t.x, t.y)  # → 2 2\n    print(\"Ходов до (4, 6):\", t.count_moves(4, 6))  # → 4\n    t.evolve()\n    print(\"Новая скорость:\", t.s)  # → 3\nif __name__ == \"__main__\":\n    practice_1()",
         "detail": "module_1.theme_5.lesson_1",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def main():\n    lesson_4.practice_1()\n    lesson_4.practice_2()\n    lesson_4.practice_3()\nif __name__ == \"__main__\":\n    main()",
-        "detail": "main",
         "documentation": {}
     }
 ]
